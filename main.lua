@@ -5,29 +5,30 @@ function library:CreateWindow(title)
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
     local MainFrame = Instance.new("Frame")
-    MainFrame.Size = UDim2.new(0, 400, 0, 300)
-    MainFrame.Position = UDim2.new(0.3, 0, 0.2, 0)
+    MainFrame.Size = UDim2.new(0, 800, 0, 600)  -- Increased the size
+    MainFrame.Position = UDim2.new(0.2, 0, 0.2, 0)
     MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
     MainFrame.BorderSizePixel = 0
     MainFrame.Parent = ScreenGui
 
     local SideBar = Instance.new("Frame")
-    SideBar.Size = UDim2.new(0, 100, 1, 0)
+    SideBar.Size = UDim2.new(0, 200, 1, 0)  -- Increased the size of the sidebar
     SideBar.Position = UDim2.new(0, 0, 0, 0)
     SideBar.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
     SideBar.Parent = MainFrame
 
     local Title = Instance.new("TextLabel")
-    Title.Size = UDim2.new(1, 0, 0, 30)
+    Title.Size = UDim2.new(1, 0, 0, 40)  -- Increased height for the title
     Title.BackgroundTransparency = 1
     Title.Text = title
-    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title.TextColor3 = Color3.fromRGB(204, 0, 255)  -- Purple color for the title
     Title.TextScaled = true
+    Title.TextSize = 24  -- Made the text smaller
     Title.Parent = SideBar
 
     local ContentFrame = Instance.new("Frame")
-    ContentFrame.Size = UDim2.new(1, -100, 1, 0)
-    ContentFrame.Position = UDim2.new(0, 100, 0, 0)
+    ContentFrame.Size = UDim2.new(1, -200, 1, 0)  -- Adjusted based on sidebar size
+    ContentFrame.Position = UDim2.new(0, 200, 0, 0)  -- Adjusted based on sidebar size
     ContentFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     ContentFrame.Parent = MainFrame
 
